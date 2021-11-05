@@ -12,8 +12,13 @@ class Chatroom {
             room: this.room,
             created_at: firebase.firestore.Timestamp.fromDate(now) 
         };
+        const response = await this.chats.add(chat);
+        return response;
     }
 }
 
 const chatroom = new Chatroom('sport', 'seba');
-console.log(chatroom)
+
+chatroom.addChat('yo yo yo yo yo')
+    .then(() => console.log('chat added'))
+    .catch(err => console.log(err))
