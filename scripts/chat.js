@@ -40,17 +40,5 @@ class Chatroom {
     }
 }
 
-const chatroom = new Chatroom('general', 'seba');
 
-chatroom.getChats((data) => {
-    console.log(data)
-});
 
-setTimeout(() => {
-    chatroom.updateRoom('music');
-    chatroom.updateName('Amelka')
-    chatroom.getChats((data) => {
-        console.log(data)
-    });
-    chatroom.addChat('hellooooo')
-}, 2000)
