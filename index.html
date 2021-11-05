@@ -48,6 +48,22 @@
             <div class="update-mssg"></div>
         </form>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBbjFXoJO4T4LBKdvxjpMJwGT6JLAGdyug",
+            authDomain: "seba-chat.firebaseapp.com",
+            projectId: "seba-chat",
+            storageBucket: "seba-chat.appspot.com",
+            messagingSenderId: "382385019309",
+            appId: "1:382385019309:web:3be95ab1ba50e6ddbca924",
+            measurementId: "G-5FVVBK9D8C"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const bd = firebase.firestore();
+    </script>
     <script src="./scripts/chat.js"></script>
     <script src="./scripts/ui.js"></script>
     <script src="./scripts/app.js"></script>
