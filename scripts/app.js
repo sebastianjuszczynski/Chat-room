@@ -25,8 +25,10 @@ newNameForm.addEventListener("submit", e => {
     
 })
 
+const username = localStorage.username ? localStorage.username : "unknown"
+
 const chatUI = new ChatUI(chatList);
-const chatroom = new Chatroom('general', 'seba');
+const chatroom = new Chatroom('general', username);
 
 chatroom.getChats((data) => {
     chatUI.render(data)
